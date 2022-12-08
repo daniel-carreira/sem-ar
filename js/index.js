@@ -169,8 +169,10 @@ const options = {
     password: '',
 }
 
-const client  = mqtt.connect(url, options)
+console.log("trying to connect")
+const client = mqtt.connect(url, options)
 client.on('connect', async function() {
+    console.log("connected")
     await getAuthUser()
     client.subscribe(`${store.user.id}/disaggregation`, function (err) {
         if (!err) {

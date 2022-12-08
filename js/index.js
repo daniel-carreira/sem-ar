@@ -154,7 +154,7 @@ function getLastObservation() {
         store.equipments = response.data.observation.equipments
     })
 }
-getLastObservation()
+//getLastObservation()
 
 //////////////////////////////////////////////////////
 //          MQTT

@@ -159,7 +159,7 @@ getLastObservation()
 //////////////////////////////////////////////////////
 //          MQTT
 //////////////////////////////////////////////////////
-const url = 'ws://broker.hivemq.com:8000/mqtt'
+const url = 'wss://broker.emqx.io:8084/mqtt'
 
 const options = {
     clean: true,

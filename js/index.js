@@ -57,7 +57,7 @@ window.addEventListener("resize", () => {
 
 // create ARToolkitContext
 ArToolkitContext = new THREEx.ArToolkitContext({
-    cameraParametersUrl: '../assets/camera_para.dat',
+    cameraParametersUrl: '/assets/camera_para.dat',
     detectionMode: 'color_and_matrix',
     patternRatio: 0.5
 });
@@ -75,7 +75,7 @@ ArToolkitContext.init(function() {
 // init controls for camera
 ArMarkerControls = new THREEx.ArMarkerControls(ArToolkitContext, camera, {
     type: 'pattern',
-    patternUrl: '../assets/pattern-marker.patt',
+    patternUrl: '/assets/pattern-marker.patt',
     changeMatrixMode: 'cameraTransformMatrix',
 });
 
@@ -246,7 +246,7 @@ let group = new THREE.Group();
 scene.add(group);
 
 function createText() {
-    fontLoader.load('../css/fonts/Roboto Black_Regular.json', (my_font) => {
+    fontLoader.load('/css/fonts/Roboto Black_Regular.json', (my_font) => {
         const geometry = new THREE.TextGeometry(`${store.power} W`, {
             font: my_font,
             size: 0.4,
